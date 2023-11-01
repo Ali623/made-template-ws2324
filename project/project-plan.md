@@ -1,32 +1,48 @@
 # Project Plan
 
-## Summary
-This project aims to use data on bicycle traffic in popular tourist areas of Cologne and Munich to identify patterns in the traffic, such as peak hours and popular locations. The analysis will help improve tourism strategies and enhance the visitor experience by identifying areas for improvement in bicycle infrastructure and services.
+## Title
+Comparative Analysis of Registered Trees in Cologne and Frankfurt (2020)
 
-## Rationale
+## Main Question
+1. How does the number of registered trees per square unit in Cologne compare to Frankfurt for the year 2020?
 
-The analysis can provide insights on popular tourist locations for cycling and help visitors plan their trips accordingly.
+## Description
+The project aims to conduct a comparative analysis of the number of registered trees in Cologne and Frankfurt for the year 2020. Understanding the differences and
+similarities in tree populations between these two cities can provide valuable insights into urban forestry and environmental management. This analysis will
+utilize data from two distinct datasets, one for Cologne and another for Frankfurt.
+
+The project will employ data science methodologies and statistical techniques to explore and visualize the tree data. By examining factors such as tree species
+distribution, Number of trees, and geographic distribution, the project aims to answer the main question regarding the comparative tree populations.
 
 ## Datasources
-
-<!-- Describe each datasources you plan to use in a section. Use the prefic "DatasourceX" where X is the id of the datasource. -->
-
-### Datasource1: Bicycle traffic data Cologne
-* Metadata URL: https://mobilithek.info/offers/-2236641647976866002
-* Data URL:  https://offenedaten-koeln.de/sites/default/files/Fahrrad_Zaehlstellen_Koeln_2016.csv
+### Datasource1: Cologne tree register
+* Metadata URL: https://offenedaten-koeln.de/dataset
+* Data URL: https://offenedaten-koeln.de/sites/default/files/Bestand_Einzelbaeume_Koeln_0.csv
 * Data Type: CSV
 
-The dataset includes the location of each bicycle counter, the direction of bicycle traffic, and the type of bicycle counter used.
+The Cologne Tree Register dataset provides comprehensive information on the tree population within the city of Cologne, Germany. It includes data on tree species,
+location, and other attributes, offering insights into urban forestry and environmental management in the region.
 
-### Datasource2: Bike Traffic in Munich
-* Metadata URL: https://www.kaggle.com/datasets/lucafrance/bike-traffic-in-munich
-* Data URL:  https://shorturl.at/vGNT9
+### Datasource1: Tree register Frankfurt am Main (2020)
+* Metadata URL: https://www.offenedaten.frankfurt.de/dataset
+* Data URL: https://offenedaten.frankfurt.de/dataset/73c5a6b3-c033-4dad-bb7d-8783427dd233/resource/e53aacb4-4462-4b69-ab9f-4252a402a082/download/baumauswahl_veroffentlichung_8-berbeitetrkr.csv
 * Data Type: CSV
 
-It includes data on the number of bicycles passing through each location per hour, day, and month, along with the location of each counter and the direction of bicycle traffic. 
+The "Tree Register Frankfurt am Main (2020)" dataset provides comprehensive information on the city's tree inventory for the year 2020, offering details on tree species, location, and more. This dataset is a valuable resource for environmental analysis and urban forestry research.
 
 ## Work Packages
+1. Data Collection and Preparation
+   - Acquire and clean the tree datasets for both Cologne and Frankfurt.
+   - Merge and prepare the data for analysis.
 
-1. Data Acquisition
-2. Data Cleaning
-3. Data Integration
+2. Exploratory Data Analysis (EDA)
+   - Conduct EDA to understand the distribution of tree species, health, and other relevant attributes.
+   - Create visualizations to gain insights into the data.
+
+3. Statistical Analysis
+   - Perform statistical tests to compare the tree populations in Cologne and Frankfurt.
+   - Identify significant differences and trends.
+
+4. Visualization and Reporting
+   - Create visual reports to present the findings of the comparative analysis.
+   - Prepare a project report and visual summaries.

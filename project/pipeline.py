@@ -1,14 +1,28 @@
 import numpy as np
 import pandas as pd
 from sqlalchemy import create_engine
-import ETL
+
+# To extract the data from csv file
+def Extract(file):
+    df = pd.read_csv(file, delimiter=",")
+    return df
+
+# To transform the data (change column labels)
+def Transform(df, column_map):
+    df = df.rename(columns=column_map)
+    return df
+
+# Load data to create a SQLite file
+def Load(df, table):
+    engine = create_engine(f"sqlite:///data/Tree.sqlite")
+    df.to_sql(table, engine, if_exists="replace")
 
 # main function
 def main():
-    file1 = "https://drive.google.com/uc?export=download&id=1bOcgQ9hBH5F_jLwbrcTJY4JLLn6_Z_EH"
-    file2 = "https://drive.google.com/uc?export=download&id=1eLinVTl2DyUst8yJ4DCbBhoS-swW930W"
+    file1 = "https://drive.google.com/uc?export=download&id=1yYhqveHSgZB60CaU8KoA3NlzZX_bdNzW"
+    file2 = "https://drive.google.com/uc?export=download&id=1kEO_N7mOjVnJV6ViKlmdbny97GTl6HDP"
 
-    df1 = ETL.Extract(file1)
+    df1 = Extract(file1)
     column_map1 = {
         "PFLEGEOBJE" : "Care_Object",
         "Objekttyp" : "Object_Type",
@@ -22,10 +36,10 @@ def main():
         "AlterSchätzung" : "Age_estimate"
     }
 
-    df1 = ETL.Transform(df1, column_map1)
-    ETL.Load(df1, "table_1")
+    df1 = Transform(df1, column_map1)
+    Load(df1, "table_1")
 
-    df2 = ETL.Extract(file2)
+    df2 = Extract(file2)
     column_map2 = {
         "BAUMNUMMER" : "Tree_number",
         "HOCHWERT" : "High_value",
@@ -43,8 +57,8 @@ def main():
         "Kr_Radius" : "Kr_Radius",
     }
 
-    df2 = ETL.Transform(df2, column_map2)
-    ETL.Load(df2, "table_2")
+    df2 = Transform(df2, column_map2)
+    Load(df2, "table_2")
 
 if __name__ == "__main__":
     main()

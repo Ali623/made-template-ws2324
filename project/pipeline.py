@@ -23,40 +23,41 @@ def main():
     file2 = "https://offenedaten.frankfurt.de/dataset/73c5a6b3-c033-4dad-bb7d-8783427dd233/resource/e53aacb4-4462-4b69-ab9f-4252a402a082/download/baumauswahl_veroffentlichung_8-berbeitetrkr.csv"
 
     df1 = Extract(file1)
-    col_to_drop1 = ["Baum-Nr.","HausNr","Lage","Gattung","Art","Sorte","DeutscherN"]
+    col_to_drop1 = ["Baum-Nr.","HausNr","Lage","Art","Sorte","DeutscherN"]
     column_map1 = {
         "PFLEGEOBJE" : "Care_Object",
         "Objekttyp" : "Object_Type",
         "Bezirk" : "District",
-        "X_Koordina" : "X_coordinate",
-        "Y_Koordina" : "Y_coordinate",
+        "X_Koordina" : "x_coordinate",
+        "Y_Koordina" : "y_coordinate",
         "STAMMVON" : "Tribe_of",
-        "STAMMBIS" : "Stem_bis",
+        "STAMMBIS" : "trunk diameter",
         "KRONE" : "Crown",
         "HöHE" : "Height",
-        "AlterSchätzung" : "Age_estimate"
+        "AlterSchätzung" : "Age",
+        "Gattung" : "Genus"
     }
 
     df1 = Transform(df1, column_map1, col_to_drop1)
     Load(df1, "table_1")
 
     df2 = Extract(file2)
-    col_to_drop2 = ["STANDORT","BAUM_STATU","GATTUNG","GATTUNGART","GA_LANG","GEBIET","STRASSE"]
+    col_to_drop2 = ["STANDORT","BAUM_STATU","GATTUNGART","GA_LANG","GEBIET","STRASSE"]
     column_map2 = {
         "BAUMNUMMER" : "Tree_number",
-        "HOCHWERT" : "High_value",
-        "RECHTSWERT" : "Legal_value",
+        "HOCHWERT" : "y_coordinate",
+        "RECHTSWERT" : "x_coordinate",
         "GATTUNGART" : "Genus_type",
         "GATTUNG" : "Genus",
         "GA_LANG" : "GA_LANG",
-        "KR_DURCHM" : "Kr_diam",
+        "KR_DURCHM" : "trunk diameter",
         "ST_UMFANG" : "ST_Scope",
         "GEBIET" : "Area",
         "STRASSE" : "Street",
-        "BAUMHOEHE" : "Tree_Height",
+        "BAUMHOEHE" : "Height",
         "ST_DURCHM" : "St_diam",
         "PFLANZJAHR" : "Planting_year",
-        "Kr_Radius" : "Kr_Radius",
+        "Kr_Radius" : "trunk radius",
     }
 
     df2 = Transform(df2, column_map2, col_to_drop2)

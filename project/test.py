@@ -30,7 +30,7 @@ def perform_transformation_test(data, column_map, col_to_drop):
 # define function to test the loading process
 
 def perform_data_loading_test(table_name):
-    engine = create_engine(f"sqlite:///../data/Tree.sqlite")
+    engine = create_engine(f"sqlite:///./data/Tree.sqlite")
 
     # Create an inspector object
     inspector = inspect(engine)

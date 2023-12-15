@@ -14,7 +14,7 @@ def Transform(df, column_map, col_to_drop):
 
 # Load data to create a SQLite file
 def Load(df, table):
-    engine = create_engine(f"sqlite:///../data/Tree.sqlite")
+    engine = create_engine(f"sqlite:///./data/Tree.sqlite")
     df.to_sql(table, engine, if_exists="replace")
 
 # main function

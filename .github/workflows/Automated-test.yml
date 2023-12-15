@@ -22,8 +22,8 @@ jobs:
       run: |
         pip install sqlalchemy pandas numpy
 
-    - name: Run tests
-      run: |
-          chmod +x ./project/tests.sh
-          ./project/tests.sh
-          echo " All Tests Done Successfully "
+    - name: Run pipline.py
+      run: python project/pipeline.py
+        
+    - name: Run test.py
+      run: python project/test.py

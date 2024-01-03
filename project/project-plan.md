@@ -35,6 +35,10 @@ location, and other attributes, offering insights into urban forestry and enviro
 The "Tree Register Frankfurt am Main (2020)" dataset provides comprehensive information on the city's tree inventory for the year 2020, offering details on tree species, location, and more. This dataset is a valuable resource for environmental analysis and urban forestry research.
 
 ## Work Packages
+### Project flow
+![Flow Chart](output_data/projectflow.png)
+
+### Description
 1. Data Collection and Preparation
    - Acquire and clean the tree datasets for both Cologne and Frankfurt.
    - Merge and prepare the data for analysis.

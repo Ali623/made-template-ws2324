@@ -53,4 +53,5 @@ The "Tree Register Frankfurt am Main (2020)" dataset provides comprehensive info
 4. Reporting
    - Prepare a project report and visual summaries.
   
-
+## Final Report
+The final report for this project can be found [here](https://github.com/Ali623/made-template-ws2324/blob/main/project/Report.ipynb).

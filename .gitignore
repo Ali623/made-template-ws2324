@@ -2,3 +2,5 @@
 /data/*
 !/data/.gitkeep
 /project/__pycache__/*
+/exercises/mowesta-dataset.zip
+/exercises/mowesta-dataset

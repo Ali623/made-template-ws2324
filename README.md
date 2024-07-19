@@ -7,8 +7,7 @@ Comparative Analysis of Registered Trees in Cologne and Frankfurt (2020)
 The project aims to conduct a comparative analysis of the number of registered trees in Cologne and Frankfurt for the year 2020. Understanding the differences and
 similarities in tree populations between these two cities can provide valuable insights into urban forestry and environmental management. This analysis will
 utilize data from two distinct datasets, one for Cologne and another for Frankfurt.
-The project will employ data science methodologies and statistical techniques to explore and visualize the tree data. By examining factors such as tree species
-distribution, Age distribution, Trunk diameter distribution, Height distribution, and geographic distribution, the project aims to answer the main question regarding the comparative tree populations.
+The project will employ data science methodologies and statistical techniques to explore and visualize the tree data. By examining factors such as tree species, Age, Trunk diameter, Height, and geographic distribution, the project aims to answer the main question regarding the comparative tree populations.
 
 
 ## Datasources

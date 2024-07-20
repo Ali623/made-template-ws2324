@@ -31,7 +31,7 @@ The "Tree Register Frankfurt am Main (2020)" dataset provides comprehensive info
 
 ## Main Questions
 1. What is the distribution of age of trees in the region of Colonge and Frankfurt for the year 2020?
-
+* The report comparing the age distribution of trees in Cologne and Frankfurt reveals distinct patterns. Cologne exhibits a median age of 30 with an interquartile range (IQR) of 25, featuring a notable outlier of approximately 200 years, showcasing a diverse age spectrum.
 
 2. What is the distribution of height of trees in the region of Colonge and Frankfurt for the year 2020?
 3. What is the distribution of trunk diameter of trees in the region of Colonge and Frankfurt for the year 2020?
